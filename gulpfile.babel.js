@@ -9,8 +9,8 @@ var gulp = require('gulp'),
     sass=require('gulp-sass');
 
 var dirs = {
-    js: 'app/',
-    css: 'app/'
+    js: 'app/js',
+    css: 'app/css'
 };
 var notificationHelper = function(file) {
     if (file.jshint.success) {
@@ -53,6 +53,8 @@ gulp.task('transpile', function() {
 
 });
 gulp.task('watch', function() {
-    gulp.watch('app/*.js', ['transpile', 'jshint']);
+    gulp.watch(`${dirs.js}**/*.js`, ['transpile']);
+    gulp.watch(`${dirs.css}**/*.scss`, ['sass']);
 });
-gulp.task('default', ['transpile']);
+gulp.task('default', ['transpile','sass']);
+gulp.task('build', ['transpile','sass']);
