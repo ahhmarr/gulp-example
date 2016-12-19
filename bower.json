@@ -1,0 +1,17 @@
+{
+  "name": "linting",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "ahmar siddiqui <ahmar@niiu.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
